@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AffPubController">
+   <children>
+      <ImageView fitHeight="401.0" fitWidth="608.0">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="80.0" text="Contenu Pub : " />
+      <Label fx:id="nomLabel" layoutX="88.0" layoutY="22.0" prefHeight="30.0" prefWidth="253.0">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font></Label>
+      <Label fx:id="descLabel" layoutX="31.0" layoutY="108.0" prefHeight="70.0" prefWidth="272.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="200.0" layoutX="366.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton layoutX="350.0" layoutY="294.0" onAction="#ProfiterButton" prefHeight="30.0" prefWidth="92.0" text="Profiter">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="8.84" surfaceScale="8.83">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="279.42" color="#d73e3e" elevation="107.79" />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="284.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/images%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="92.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/images.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="496.0" layoutY="176.0" onAction="#dislikeButton" prefHeight="60.0" prefWidth="62.0" text="." />
+      <JFXButton layoutX="389.0" layoutY="176.0" onAction="#likeButton" prefHeight="60.0" prefWidth="62.0" text="." />
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="396.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/thumb-up.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="503.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/dislike-thumb.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="406.0" layoutY="228.0" text="like" />
+      <Label layoutX="513.0" layoutY="228.0" text="Dislike" />
+      <JFXButton fx:id="retour" layoutX="540.0" layoutY="10.0" text="Retour" />
+   </children>
+</AnchorPane>

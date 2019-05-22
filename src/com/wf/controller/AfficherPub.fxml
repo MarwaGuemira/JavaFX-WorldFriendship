@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AfficherPubController">
+   <children>
+      <ImageView fitHeight="696.0" fitWidth="1176.0" layoutY="-4.0">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane id="AnchorPane" layoutX="86.0" layoutY="150.0" prefHeight="472.0" prefWidth="1049.0">
+         <children>
+            <ImageView fx:id="image1" fitHeight="150.0" fitWidth="220.0" layoutX="60.0" layoutY="40.0" onMouseClicked="#AfficheMoi1" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image2" fitHeight="150.0" fitWidth="220.0" layoutX="669.0" layoutY="40.0" onMouseClicked="#AfficheMoi2" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image4" fitHeight="150.0" fitWidth="220.0" layoutX="60.0" layoutY="300.0" onMouseClicked="#AfficheMoi4" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image5" fitHeight="150.0" fitWidth="220.0" layoutX="370.0" layoutY="300.0" onMouseClicked="#AfficheMoi5" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image3" fitHeight="150.0" fitWidth="220.0" layoutX="370.0" layoutY="40.0" onMouseClicked="#AfficheMoi3" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image6" fitHeight="150.0" fitWidth="220.0" layoutX="669.0" layoutY="300.0" onMouseClicked="#AfficheMoi6" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="label" layoutX="49.0" layoutY="210.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label4" layoutX="74.0" layoutY="467.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label2" layoutX="361.0" layoutY="213.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label5" layoutX="386.0" layoutY="470.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label3" layoutX="668.0" layoutY="204.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label6" layoutX="693.0" layoutY="462.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label11" layoutX="49.0" layoutY="220.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label41" layoutX="74.0" layoutY="477.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label21" layoutX="371.0" layoutY="223.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label51" layoutX="396.0" layoutY="480.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label31" layoutX="678.0" layoutY="214.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <Label fx:id="label61" layoutX="703.0" layoutY="472.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+            <JFXButton fx:id="retour" layoutX="1032.0" layoutY="474.0" text="Retour" />
+            <ImageView fx:id="imagesuivant" fitHeight="55.0" fitWidth="52.0" layoutX="1004.0" layoutY="217.0" onMouseClicked="#suivant">
+               <image>
+                  <Image url="@../../../images/suivant.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="113.0" fitWidth="127.0" layoutX="27.0" layoutY="4.0">
+         <image>
+            <Image url="@../../../images/logofs.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="164.0" layoutY="11.0" prefHeight="98.0" prefWidth="760.0" text="World Friendshipe" textFill="#fffdfd">
+         <font>
+            <Font name="System Italic" size="55.0" />
+         </font>
+         <effect>
+            <Lighting specularConstant="2.0" specularExponent="26.04" surfaceScale="3.59">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="91.05" color="#b28f4900" elevation="145.47" />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <ImageView fx:id="imageprecedent" fitHeight="45.0" fitWidth="47.0" layoutX="41.0" layoutY="404.0" onMouseClicked="#precedent">
+         <image>
+            <Image url="@../../../images/precedent.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="mespub" layoutX="378.0" layoutY="112.0" prefHeight="65.0" prefWidth="216.0" text="MesPub" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Italic" size="28.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#a5db69" />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="pubprofite" layoutX="693.0" layoutY="111.0" text="Pubprofite" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="28.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -15,25 +15,23 @@
 <AnchorPane id="AnchorPane" prefHeight="628.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AffichageMesEvenementController">
    <children>
         <Pane layoutY="735.0" prefHeight="20.0" prefWidth="786.0" style="-fx-background-color: #cef4e3;" />
-      <ImageView fitHeight="831.0" fitWidth="796.0">
+      <ImageView fitHeight="831.0" fitWidth="869.0">
          <image>
             <Image url="@../../../images/bg.jpg" />
          </image>
       </ImageView>
        
-      <Pane layoutX="29.0" layoutY="14.0" prefHeight="563.0" prefWidth="840.0">
+      <Pane layoutX="29.0" layoutY="14.0" prefHeight="812.0" prefWidth="840.0">
          <children>
-            <TableView fx:id="eveTable" layoutX="14.0" layoutY="90.0" onMouseClicked="#enable" prefHeight="192.0" prefWidth="581.0">
+            <TableView fx:id="eveTable" layoutX="14.0" layoutY="90.0" onMouseClicked="#enable" prefHeight="192.0" prefWidth="491.0">
               <columns>
-                <TableColumn fx:id="colId" prefWidth="45.60000801086426" text="Id" />
                 <TableColumn fx:id="colNom" prefWidth="51.999969482421875" text="Nom" />
                   <TableColumn fx:id="coldesc" prefWidth="83.20000457763672" text="Descripction" />
-                  <TableColumn fx:id="colImage" prefWidth="45.5999755859375" text="Image" />
                   <TableColumn fx:id="colpays" prefWidth="69.5999755859375" text="Pays" />
                   <TableColumn fx:id="colregion" prefWidth="70.39996337890625" text="Region" />
                   <TableColumn fx:id="colAdresse" prefWidth="61.5999755859375" text="Adresse" />
-                  <TableColumn fx:id="colnbrpar" prefWidth="75.0" text="nbr par" />
                   <TableColumn fx:id="colnbtick" prefWidth="75.0" text="nbr tick" />
+                  <TableColumn fx:id="colnbrpar" prefWidth="75.0" text="nbr par" />
               </columns>
             </TableView>
             <Label layoutX="139.0" layoutY="7.0" prefHeight="2.0" prefWidth="356.0" text="Liste des utilisateurs">
@@ -41,16 +39,23 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="rechercheId" layoutX="168.0" layoutY="47.0" />
+            <TextField fx:id="search2" layoutX="168.0" layoutY="47.0" onAction="#search2" onKeyReleased="#search2" />
             <Label layoutX="113.0" layoutY="51.0" prefHeight="17.0" prefWidth="86.0" text="Id" />
-            <Label layoutX="14.0" layoutY="342.0" text="Id:" />
-            <Label layoutX="14.0" layoutY="384.0" text="Nom :" />
+            <Label layoutX="14.0" layoutY="457.0" text="Pays  : " />
+            <Label layoutX="16.0" layoutY="393.0" text="Nom :" />
             <Label layoutX="14.0" layoutY="424.0" text="Description" />
-            <TextField fx:id="idLabel" layoutX="46.0" layoutY="338.0" />
-            <TextField fx:id="nomLabel" layoutX="65.0" layoutY="380.0" />
+            <TextField fx:id="pays" layoutX="94.0" layoutY="453.0" />
+            <TextField fx:id="nomLabel" layoutX="94.0" layoutY="389.0" />
             <TextField fx:id="descLabel" layoutX="94.0" layoutY="420.0" />
-            <Button fx:id="modifier" layoutX="427.0" layoutY="351.0" mnemonicParsing="false" onAction="#updateUser" text="Update" />
-            <JFXButton layoutX="535.0" layoutY="351.0" onAction="#deleteButton" style="-fx-background-color: #FF0921;" text="delete" />
+            <Button fx:id="modifier" layoutX="323.0" layoutY="462.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="51.0" prefWidth="92.0" text="Update" />
+            <JFXButton layoutX="505.0" layoutY="466.0" onAction="#deleteButton" prefHeight="51.0" prefWidth="86.0" style="-fx-background-color: #FF0921;" text="delete" />
+            <JFXButton fx:id="retour" layoutX="751.0" layoutY="12.0" text="retour" />
+            <Label layoutX="13.0" layoutY="491.0" text="Region" />
+            <TextField fx:id="nbrtick" layoutX="94.0" layoutY="551.0" />
+            <TextField fx:id="region" layoutX="94.0" layoutY="487.0" />
+            <TextField fx:id="adresse" layoutX="94.0" layoutY="518.0" />
+            <Label layoutX="13.0" layoutY="522.0" text="Adresse" />
+            <Label layoutX="13.0" layoutY="555.0" text="nbr tick" />
          </children>
       </Pane>
    </children>

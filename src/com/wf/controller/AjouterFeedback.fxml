@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AjouterFeedbackController">
+   <children>
+      <ImageView fitHeight="412.0" fitWidth="600.0" layoutY="-19.0">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <Rating fx:id="rating" layoutX="223.0" layoutY="110.0" />
+      <Label fx:id="msg" layoutX="303.0" layoutY="178.0" prefHeight="20.0" prefWidth="176.0" text="Description ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="desc" layoutX="250.0" layoutY="209.0" />
+      <JFXButton layoutX="311.0" layoutY="273.0" onAction="#insertFeedback" text="okkk" />
+      <JFXButton fx:id="onbt3" layoutX="511.0" layoutY="30.0" text="Retour" />
+      <Label layoutX="162.0" layoutY="28.0" text="Donner une note " textFill="#ffb405">
+         <font>
+            <Font name="System Bold Italic" size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

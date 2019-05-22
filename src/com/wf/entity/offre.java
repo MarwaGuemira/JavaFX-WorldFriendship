@@ -16,6 +16,13 @@ public class offre {
     private int prix ;
     private String pays ;
 
+    public offre() {
+    }
+
+    public offre(int idoffre) {
+        this.idoffre = idoffre;
+    }
+
     public offre(int idoffre, String nomoffre, int ordre, int prix, String pays) {
         this.idoffre = idoffre;
         this.nomoffre = nomoffre;

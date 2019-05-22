@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="492.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.MonEspaceProduitController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="6.0" layoutY="14.0" prefHeight="400.0" prefWidth="992.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="214.0" minHeight="0.0" minWidth="200.0" prefHeight="463.0" prefWidth="214.0">
+               <children>
+                  <ScrollPane fx:id="images" prefHeight="463.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-19.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="492.0" fitWidth="496.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/bg.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" layoutX="12.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="n" layoutX="20.0" layoutY="304.0" text="Nom Produit :" />
+                  <Label fx:id="pp" layoutX="20.0" layoutY="332.0" text="Prix :" />
+                  <Label fx:id="c" layoutX="19.0" layoutY="357.0" text="Categorie :" />
+                  <Label fx:id="d" layoutX="19.0" layoutY="386.0" text="Description :" />
+                  <Label fx:id="idn" layoutX="118.0" layoutY="306.0" prefHeight="17.0" prefWidth="113.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="idp" layoutX="118.0" layoutY="332.0" prefHeight="25.0" prefWidth="113.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="idcat" layoutX="118.0" layoutY="355.0" prefHeight="25.0" prefWidth="113.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="idd" layoutX="118.0" layoutY="382.0" prefHeight="25.0" prefWidth="113.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="modif" layoutX="226.0" layoutY="222.0" onMouseClicked="#modifie" text="Modifier Ce Produit ?" textFill="#2e286f">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nn" layoutX="238.0" layoutY="277.0" text="New Name :" />
+                  <Label fx:id="np" layoutX="238.0" layoutY="310.0" text="New Prix :" />
+                  <Label fx:id="nc" layoutX="238.0" layoutY="341.0" text="New Categorie :" />
+                  <Label fx:id="nd" layoutX="238.0" layoutY="372.0" text="New Descrioption :" />
+                  <TextField fx:id="newn" layoutX="325.0" layoutY="273.0" />
+                  <TextField fx:id="newp" layoutX="325.0" layoutY="306.0" />
+                  <ComboBox fx:id="newCat" layoutX="326.0" layoutY="337.0" prefHeight="25.0" prefWidth="149.0" />
+                  <Button fx:id="btnModif" layoutX="245.0" layoutY="434.0" mnemonicParsing="false" onAction="#ModifierProd" prefHeight="25.0" prefWidth="75.0" text="Modifier" />
+                  <Label fx:id="idsupp" layoutX="226.0" layoutY="243.0" text="Voulez-Vous Supprimer cette Article ?" textFill="#122b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnsupp" layoutX="245.0" layoutY="395.0" mnemonicParsing="false" onDragDetected="#SupprimerProd" prefHeight="25.0" prefWidth="75.0" text="Supprimer" />
+                  <Label fx:id="idpr" layoutX="144.0" layoutY="33.0" textFill="#0c0f4d">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font></Label>
+                  <TextArea fx:id="newd" layoutX="339.0" layoutY="371.0" prefHeight="90.0" prefWidth="137.0" />
+                  <Label fx:id="idpr1" layoutX="163.0" layoutY="26.0" text="Mon Espace" textFill="#0c0f4d">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="espacevente" layoutX="375.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Espace_Vente" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

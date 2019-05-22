@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AjouterProduitController">
+   <children>
+      <ImageView fitHeight="567.0" fitWidth="632.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="23.0" layoutY="86.0" prefHeight="416.0" prefWidth="300.0">
+         <children>
+            <TextField id="Prix" fx:id="Prix" layoutX="105.0" layoutY="106.0" promptText="Prix" />
+            <Label layoutX="15.0" layoutY="67.0" text="Nom :" textFill="WHITE" />
+            <Label layoutX="15.0" layoutY="113.0" text="Prix :" textFill="WHITE" />
+            <Label layoutX="15.0" layoutY="149.0" text="Categorie :" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="240.0" text="Description :" textFill="WHITE" />
+            <TextField id="Nomp" fx:id="Nomp" layoutX="105.0" layoutY="64.0" promptText="Nom" />
+            <Label layoutX="26.0" layoutY="6.0" prefHeight="39.0" prefWidth="229.0" text="Ajouter Un Produit" textAlignment="RIGHT" textFill="#fffbfb">
+               <font>
+                  <Font name="Bell MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="iddesc" layoutX="108.0" layoutY="237.0" prefHeight="74.0" prefWidth="149.0" />
+            <ComboBox fx:id="idcombobox" layoutX="105.0" layoutY="184.0" prefWidth="150.0" />
+            <Label layoutX="14.0" layoutY="191.0" prefHeight="17.0" prefWidth="91.0" text="Prix negociable :" textFill="#fffdfd" />
+            <ComboBox fx:id="idcat" layoutX="105.0" layoutY="145.0" prefWidth="150.0" />
+            <Label fx:id="errnom" layoutX="105.0" layoutY="46.0" prefHeight="17.0" prefWidth="136.0" textFill="#b91212">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="errTel" layoutX="105.0" layoutY="89.0" prefHeight="17.0" prefWidth="136.0" textFill="#d01313">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="idimage" fitHeight="235.0" fitWidth="200.0" layoutX="335.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="347.0" layoutY="323.0" mnemonicParsing="false" onAction="#ProductPicture" text="Upload Your Product's Picture" />
+      <Button fx:id="monespace" layoutX="405.0" layoutY="506.0" mnemonicParsing="false" text="Mon Espace" />
+      <Button layoutX="251.0" layoutY="445.0" mnemonicParsing="false" onAction="#insertProduit" text="Ajouter Produit" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

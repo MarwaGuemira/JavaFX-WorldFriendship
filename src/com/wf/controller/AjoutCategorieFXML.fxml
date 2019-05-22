@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AjoutCategorieFXMLController">
+   <children>
+      <JFXButton fx:id="AjouterBTN" layoutX="385.0" layoutY="333.0" onAction="#AjouterCategorieAction" text="Ajouter" />
+      <JFXTextField fx:id="NomTXT" layoutX="147.0" layoutY="122.0" prefHeight="25.0" prefWidth="308.0" promptText="nom Categorie" />
+      <JFXTextArea fx:id="DescriptionTXT" layoutX="148.0" layoutY="165.0" prefHeight="91.0" prefWidth="308.0" promptText="Description" />
+      <ImageView fx:id="CategorieIV" fitHeight="91.0" fitWidth="128.0" layoutX="153.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="UplodImageBTN" layoutX="308.0" layoutY="275.0" onAction="#UploadAction" prefHeight="25.0" prefWidth="158.0" text="Upload Image" />
+      <HBox prefHeight="108.0" prefWidth="600.0" style="-fx-background-color: #00CCCB;">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="122.0" prefWidth="599.0" style="-fx-alignment: center;" text="Ajouter une catégorie" textFill="#02568b">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

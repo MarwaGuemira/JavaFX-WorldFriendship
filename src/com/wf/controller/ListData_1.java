@@ -46,5 +46,5 @@ class ListData2 {
     {
         return Pubs2;
     }
-    
+
 }

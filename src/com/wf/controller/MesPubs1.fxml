@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="923.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.MesPubs1Controller">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="922.0">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <ScrollPane fx:id="pane" layoutX="61.0" layoutY="247.0" prefHeight="437.0" prefWidth="810.0" style="-fx-background-color: #2fd7a5;" />
+      <Label layoutX="345.0" layoutY="184.0" text="Mes Publicités" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="39.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="109.0" fitWidth="123.0" layoutX="3.0" layoutY="43.0">
+         <image>
+            <Image url="@../../../images/logofs.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="138.0" layoutY="64.0" prefHeight="61.0" prefWidth="392.0" text="World Friendship" textAlignment="CENTER" textFill="#8c680c" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="43.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="retour" layoutX="858.0" layoutY="14.0" text="retour" />
+   </children>
+</AnchorPane>

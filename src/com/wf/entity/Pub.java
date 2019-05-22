@@ -6,6 +6,7 @@
 package com.wf.entity;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -29,8 +30,19 @@ public class Pub {
     private  int nbrprofit;
     private int offre_id;
         private int user_id;
+    private int nbrlikes;
+    private int nbrdislikes;
 
     public Pub() {
+    }
+
+    public Pub(int idpublicite) {
+        this.idpublicite = idpublicite;
+    }
+
+    public Pub(int idpublicite, int nbrprofit) {
+        this.idpublicite = idpublicite;
+        this.nbrprofit = nbrprofit;
     }
 
     public Pub(int idpublicite, String nompublicite, String contenupublicte) {
@@ -53,6 +65,26 @@ public class Pub {
         this.nomimage = nomimage;
     }
 
+    public Pub(int idpublicite, int point, int nbrprofit) {
+        this.idpublicite = idpublicite;
+        this.point = point;
+        this.nbrprofit = nbrprofit;
+    }
+
+    public Pub(int idpublicite, String nompublicite, String pays, String region, String adresse, LocalDate datepublicitefin, String contenupublicte, float prixproduit, float prixremise) {
+        this.idpublicite = idpublicite;
+        this.nompublicite = nompublicite;
+        this.pays = pays;
+        this.region = region;
+        this.adresse = adresse;
+        this.datepublicitefin = datepublicitefin;
+        this.contenupublicte = contenupublicte;
+        this.prixproduit = prixproduit;
+        this.prixremise = prixremise;
+    }
+    
+
+
     public Pub(String nompublicite, String pays, String region, String adresse, LocalDate datepublicite, LocalDate datepublicitefin, String contenupublicte, float prixproduit, float pourcentage, float prixremise, String nomimage) {
         this.nompublicite = nompublicite;
         this.pays = pays;
@@ -67,7 +99,9 @@ public class Pub {
         this.nomimage = nomimage;
     }
 
-    public Pub(String nompublicite, String pays, String region, String adresse, LocalDate datepublicite, LocalDate datepublicitefin, String contenupublicte, int point, float prixproduit, float pourcentage, float prixremise, String nomimage, int offre_id) {
+//    
+
+    public Pub(String nompublicite, String pays, String region, String adresse, LocalDate datepublicite, LocalDate datepublicitefin, String contenupublicte, int point, float prixproduit, float pourcentage, float prixremise, String nomimage, int user_id) {
         this.nompublicite = nompublicite;
         this.pays = pays;
         this.region = region;
@@ -80,8 +114,11 @@ public class Pub {
         this.pourcentage = pourcentage;
         this.prixremise = prixremise;
         this.nomimage = nomimage;
-        this.offre_id = offre_id;
+        this.user_id = user_id;
     }
+    
+    
+    
       public Pub(String nompublicite, String pays, String region, String adresse, LocalDate datepublicite, LocalDate datepublicitefin, String contenupublicte, int point, float prixproduit, float pourcentage, float prixremise, String nomimage, int offre_id, int user_id) {
         this.nompublicite = nompublicite;
         this.pays = pays;
@@ -113,6 +150,73 @@ public class Pub {
         this.prixremise = prixremise;
         this.nomimage = nomimage;
      
+    }
+
+    public Pub(int idpublicite, String nompublicite, int nbrlikes, int nbrdislikes) {
+        this.idpublicite = idpublicite;
+        this.nompublicite = nompublicite;
+        this.nbrlikes = nbrlikes;
+        this.nbrdislikes = nbrdislikes;
+    }
+   
+//           Pub pb = new Pub(txtNom.getText(), txtPays.getText()
+//          ,txtRegion.getText(), txtAdresse.getText(), date1 , date2 ,  txtDescription.getText(), Integer.parseInt( txtpoint.getText()) ,
+//                      Float.parseFloat(txtprixpr.getText()),Float.parseFloat(txtpource.getText()),ImgToDb,o.getIdoffre(),user.getId());
+
+    public Pub(String nompublicite, String pays, String region, String adresse, LocalDate datepublicite, LocalDate datepublicitefin, String contenupublicte, int point, float prixproduit, float pourcentage, String nomimage, int offre_id, int user_id) {
+        this.nompublicite = nompublicite;
+        this.pays = pays;
+        this.region = region;
+        this.adresse = adresse;
+        this.datepublicite = datepublicite;
+        this.datepublicitefin = datepublicitefin;
+        this.contenupublicte = contenupublicte;
+        this.point = point;
+        this.prixproduit = prixproduit;
+        this.pourcentage = pourcentage;
+        
+        this.nomimage = nomimage;
+        this.offre_id = offre_id;
+        this.user_id = user_id;
+    }
+
+
+
+    public Pub(int idpublicite, String nompublicite, String pays, String region, String adresse, LocalDate datepublicite, LocalDate datepublicitefin, String contenupublicte, int point, float prixproduit, float pourcentage, String nomimage, int user_id) {
+        this.idpublicite = idpublicite;
+        this.nompublicite = nompublicite;
+        this.pays = pays;
+        this.region = region;
+        this.adresse = adresse;
+        this.datepublicite = datepublicite;
+        this.datepublicitefin = datepublicitefin;
+        this.contenupublicte = contenupublicte;
+        this.point = point;
+        this.prixproduit = prixproduit;
+        this.pourcentage = pourcentage;
+        this.nomimage = nomimage;
+        this.user_id = user_id;
+    }
+    
+  
+    
+    
+   
+
+    public int getNbrlikes() {
+        return nbrlikes;
+    }
+
+    public void setNbrlikes(int nbrlikes) {
+        this.nbrlikes = nbrlikes;
+    }
+
+    public int getNbrdislikes() {
+        return nbrdislikes;
+    }
+
+    public void setNbrdislikes(int nbrdislikes) {
+        this.nbrdislikes = nbrdislikes;
     }
     
     public int getOffre_id() {
@@ -275,6 +379,8 @@ public class Pub {
     public String toString() {
         return "Pub{" + "idpublicite=" + idpublicite + ", nompublicite=" + nompublicite + ", pays=" + pays + ", region=" + region + ", adresse=" + adresse + ", datepublicite=" + datepublicite + ", datepublicitefin=" + datepublicitefin + ", contenupublicte=" + contenupublicte + ", point=" + point + ", prixproduit=" + prixproduit + ", pourcentage=" + pourcentage + ", prixremise=" + prixremise + ", nomimage=" + nomimage + ", nbrprofit=" + nbrprofit + '}';
     }
+
+
 
     
 }

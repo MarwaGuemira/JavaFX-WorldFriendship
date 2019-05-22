@@ -61,9 +61,24 @@ public class OffreService  implements IService<offre>{
 
     @Override
     public offre displayById(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
+      String req = "SELECT * FROM offre where  idoffre =" + id ;
+     offre o =new offre();
+      try {
+        rs = st.executeQuery(req);
+        while(rs.next()){
+             int idoffre =rs.getInt("idoffre");
+             String nomoffre= rs.getString("nomoffre");
+         
+            
+        }
+    }
+      catch (SQLException ex) {
+            Logger.getLogger(PubService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+      return o;
+    }
     @Override
     public boolean update(offre os) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

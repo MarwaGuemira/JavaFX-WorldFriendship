@@ -37,11 +37,21 @@ public class Evenement {
    private  int nbsignal ;
    private int typeevenement_id;
    private  int user_id;
+   private String gratuit ;
 
     public Evenement() {
         
         
         
+    }
+
+    public Evenement(String nomevenement, String pays, String region, String adresse, String descriptionevenement, int nbrtickets) {
+        this.nomevenement = nomevenement;
+        this.pays = pays;
+        this.region = region;
+        this.adresse = adresse;
+        this.descriptionevenement = descriptionevenement;
+        this.nbrtickets = nbrtickets;
     }
 
     public Evenement(int idevenement, String nomevenement, String descriptionevenement) {
@@ -74,11 +84,13 @@ public class Evenement {
         this.nbsignal = nbsignal;
     }
 
-    public Evenement(String nomevenement, String pays, String nomimage) {
+    public Evenement(String nomevenement, String descriptionevenement, String nomimage) {
         this.nomevenement = nomevenement;
-        this.pays = pays;
+        this.descriptionevenement = descriptionevenement;
         this.nomimage = nomimage;
     }
+
+  
 
     public Evenement(String nomevenement, String pays, String region, String adresse, String descriptionevenement, String nomimage) {
         this.nomevenement = nomevenement;
@@ -99,6 +111,8 @@ public class Evenement {
         this.nbrtickets = nbrtickets;
         this.nomimage = nomimage;
     }
+    
+    
 
     public Evenement(String nomevenement, String pays, String region, String adresse, LocalDate datedebut, String descriptionevenement, int nbrparticipants, float prixtickets, String nomimage) {
         this.nomevenement = nomevenement;
@@ -124,9 +138,20 @@ public class Evenement {
         this.nomimage = nomimage;
         this.typeevenement_id = typeevenement_id;
     }
+
+    public Evenement(int idevenement, int nbrparticipants) {
+        this.idevenement = idevenement;
+        this.nbrparticipants = nbrparticipants;
+    }
+
+    public Evenement(int idevenement, int nbrlikes, int nbrdislikes) {
+        this.idevenement = idevenement;
+        this.nbrlikes = nbrlikes;
+        this.nbrdislikes = nbrdislikes;
+    }
     
     
-    
+     
 
     public Evenement(String nomevenement, String pays, String region, String adresse, LocalDate datedebut, LocalDate datefin, String descriptionevenement, int nbrtickets, int nbrplacestotal, String nomimage, int typeevenement_id) {
         this.nomevenement = nomevenement;
@@ -156,7 +181,37 @@ public class Evenement {
         this.typeevenement_id = typeevenement_id;
         this.user_id = user_id;
     }
-    
+
+    public Evenement(int idevenement, String nomevenement, int nbsignal) {
+        this.idevenement = idevenement;
+        this.nomevenement = nomevenement;
+        this.nbsignal = nbsignal;
+    }
+
+    public Evenement(String nomevenement, String pays, String region, String adresse, LocalDate datedebut, LocalDate datefin, String descriptionevenement, int nbrplacestotal, float prixtickets, String nomimage, int typeevenement_id, int user_id , String gratuit) {
+        this.nomevenement = nomevenement;
+        this.pays = pays;
+        this.region = region;
+        this.adresse = adresse;
+        this.datedebut = datedebut;
+        this.datefin = datefin;
+        this.descriptionevenement = descriptionevenement;
+        this.nbrplacestotal = nbrplacestotal;
+        this.prixtickets = prixtickets;
+        this.nomimage = nomimage;
+        this.typeevenement_id = typeevenement_id;
+          this.user_id = user_id;
+        this.gratuit = gratuit;
+    }
+
+    public String getGratuit() {
+        return gratuit;
+    }
+
+    public void setGratuit(String gratuit) {
+        this.gratuit = gratuit;
+    }
+
 
 
     

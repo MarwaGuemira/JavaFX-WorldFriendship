@@ -19,6 +19,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 
@@ -62,8 +63,19 @@ public class LoginFXMLController implements Initializable {
             alert.setTitle("Erreur");
             alert.setContentText("username ou mot de passe incorrect");
             alert.showAndWait();
-        }else {
-        Seconnecter.getScene().setRoot(FXMLLoader.load(getClass().getResource("/com/wf/controller/Accueil.fxml")));
+        }
+        else if(u.getRole().equals("admin") ){
+          
+               
+        Seconnecter.getScene().setRoot(FXMLLoader.load(getClass().getResource("/com/wf/controller/Adminevenement.fxml")));
+        
+        }
+        
+         else {
+          
+                  Seconnecter.getScene().setRoot(FXMLLoader.load(getClass().getResource("/com/wf/controller/Accueil.fxml")));
+     
+        
         }
     }
 

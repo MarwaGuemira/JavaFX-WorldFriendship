@@ -13,7 +13,7 @@ import java.sql.Date;
  */
 public class Utilisateur {
 
-   
+    protected static Utilisateur instance;
     
     protected int id;
     protected String username;
@@ -31,7 +31,7 @@ public class Utilisateur {
     protected String pays;
     protected String region;
     public Date Datenaissance;
-
+private int point ;
     public Utilisateur(int id, String username, String email, boolean enabled, String password, Date lastLogin, String confirmationToken, String role, String nom, String prenom, int bonus, String telephone, String img, String pays, String region,Date Datenaissance) {
         this.id = id;
         this.username = username;
@@ -49,6 +49,20 @@ public class Utilisateur {
         this.pays = pays;
         this.region = region;
     }
+
+    public Utilisateur(int id, String username, String img) {
+        this.id = id;
+        this.username = username;
+        this.img = img;
+    }
+
+    public Utilisateur(int id, String email) {
+        this.id = id;
+        this.email = email;
+    }
+    
+    
+    
  public Utilisateur(int id, String username, String email, boolean enabled, String password, Date lastLogin, String confirmationToken, String role, String nom, String prenom, String telephone, String img) {
         this.id = id;
         this.username = username;
@@ -63,6 +77,49 @@ public class Utilisateur {
         this.telephone = telephone;
         this.img = img;
         this.Datenaissance=Datenaissance;
+    }
+ 
+ public Utilisateur(String username, String email, boolean enabled, String password,String confirmationToken, String role, String nom, String prenom, int bonus, String telephone, String img, String pays, String region,Date Datenaissance) {
+    
+        this.username = username;
+        this.email = email;
+        this.enabled = enabled;
+        this.password = password;
+        this.confirmationToken = confirmationToken;
+        this.role = role;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.bonus = bonus;
+        this.telephone = telephone;
+        this.img = img;
+        this.pays = pays;
+        this.region = region;
+        this.Datenaissance=Datenaissance;
+    }
+ public Utilisateur(int id, String username, String email, boolean enabled, String password, Date lastLogin, String confirmationToken, String role, String nom, String prenom, String telephone,String pays, String region) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.enabled = enabled;
+        this.password = password;
+        this.lastLogin = lastLogin;
+        this.confirmationToken = confirmationToken;
+        this.role = role;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.telephone = telephone;
+       this.pays=pays;
+       this.region=region;
+       
+    }
+
+    public Utilisateur(int id, int point) {
+        this.id = id;
+        this.point = point;
+    }
+
+    public Utilisateur(int id) {
+        this.id = id;
     }
 
     public Utilisateur() {
@@ -106,6 +163,14 @@ public class Utilisateur {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public int getPoint() {
+        return point;
+    }
+
+    public void setPoint(int point) {
+        this.point = point;
     }
 
     public String getPassword() {
@@ -195,5 +260,23 @@ public class Utilisateur {
     public void setRegion(String region) {
         this.region = region;
     }
-       
+
+    @Override
+    public String toString() {
+        return "Utilisateur{" + "id=" + id + ", username=" + username + ", email=" + email + ", enabled=" + enabled + ", password=" + password + ", lastLogin=" + lastLogin + ", confirmationToken=" + confirmationToken + ", role=" + role + ", nom=" + nom + ", prenom=" + prenom + ", bonus=" + bonus + ", telephone=" + telephone + ", img=" + img + ", pays=" + pays + ", region=" + region + ", Datenaissance=" + Datenaissance + '}';
+    }
+      
+    
+    public static Utilisateur getInstance(){
+        return instance;
+    }
+    
+    public static Utilisateur getInstance(int id, String username, String email, boolean enabled, String password, Date lastLogin,String confirmationToken,String role, String nom, String prenom, String pays , String telephone,String region){
+        if(instance == null || instance.id==0) {
+   instance = new Utilisateur(id, username,  email,  enabled, password, lastLogin,confirmationToken, role,  nom,  prenom,telephone, pays ,region);
+        }
+        return instance;
+    }
+    
+    
 }

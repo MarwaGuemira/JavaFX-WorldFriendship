@@ -2,9 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,40 +17,18 @@
             <Image url="@../../../images/bg.jpg" />
          </image>
       </ImageView>
-      <Pane layoutY="114.0" prefHeight="563.0" prefWidth="840.0">
+      <Pane layoutX="29.0" layoutY="115.0" prefHeight="563.0" prefWidth="840.0">
          <children>
-            <TableView fx:id="eveTable" layoutX="33.0" layoutY="97.0" onMouseClicked="#enable" prefHeight="226.0" prefWidth="774.0">
-              <columns>
-                <TableColumn fx:id="colId" prefWidth="45.60000801086426" text="Id" />
-                <TableColumn fx:id="colNom" prefWidth="129.60000610351562" text="Nom" />
-                  <TableColumn fx:id="coldesc" minWidth="6.399993896484375" prefWidth="140.800048828125" text="Descripction" />
-                  <TableColumn fx:id="colImage" minWidth="7.20001220703125" prefWidth="72.79998779296875" text="Image" />
-                  <TableColumn fx:id="colpays" prefWidth="62.39996337890625" text="Pays" />
-                  <TableColumn fx:id="colregion" prefWidth="55.20001220703125" text="Region" />
-                  <TableColumn fx:id="colAdresse" prefWidth="73.5999755859375" text="Adresse" />
-                  <TableColumn fx:id="colnbrpar" minWidth="0.79998779296875" prefWidth="68.79998779296875" text="nbr par" />
-                  <TableColumn fx:id="colnbtick" prefWidth="124.00006103515625" text="nbr tick" />
-              </columns>
-            </TableView>
-            <Label layoutX="139.0" layoutY="7.0" prefHeight="2.0" prefWidth="356.0" text="Liste des utilisateurs">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <TextField fx:id="search2" layoutX="168.0" layoutY="47.0" onKeyReleased="#search2" />
-            <Label layoutX="113.0" layoutY="51.0" prefHeight="17.0" prefWidth="86.0" text="Id" />
-            <Label layoutX="14.0" layoutY="342.0" text="Id:" />
-            <Label layoutX="14.0" layoutY="384.0" text="Nom :" />
-            <Label layoutX="14.0" layoutY="424.0" text="Description" />
-            <TextField fx:id="idLabel" layoutX="46.0" layoutY="338.0" />
-            <TextField fx:id="nomLabel" layoutX="65.0" layoutY="380.0" />
-            <TextField fx:id="descLabel" layoutX="94.0" layoutY="420.0" />
             <JFXButton fx:id="btajout" layoutX="577.0" layoutY="12.0" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: #FF7F50;" text="Ajouter Evenement " />
             <JFXButton fx:id="btmeseve" layoutX="628.0" layoutY="56.0" style="-fx-background-color: #FF7F50;" text="Mes Evenements " />
-            <Label layoutX="235.0" layoutY="342.0" prefHeight="25.0" prefWidth="122.0" />
-            <Label layoutX="256.0" layoutY="420.0" prefHeight="25.0" prefWidth="122.0" />
-            <Label layoutX="225.0" layoutY="380.0" prefHeight="25.0" prefWidth="122.0" />
+            <JFXButton fx:id="btnvoir" layoutX="767.0" layoutY="338.0" text="Voir plus" />
+            <ListView fx:id="listview" layoutX="25.0" layoutY="-42.0" prefHeight="335.0" prefWidth="387.0" />
          </children>
       </Pane>
+      <Label layoutX="124.0" layoutY="20.0" prefHeight="2.0" prefWidth="356.0" text="Liste des utilisateurs">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

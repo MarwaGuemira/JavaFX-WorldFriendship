@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AjouterProduitController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Documents/FB_IMG_1541464940658.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="17.0" layoutY="14.0" prefHeight="378.0" prefWidth="276.0">
+         <children>
+            <TextField id="Prix" fx:id="Prix" layoutX="83.0" layoutY="95.0" promptText="Prix" />
+            <TextField id="idcat" fx:id="idcat" layoutX="83.0" layoutY="132.0" promptText="Categorie" />
+            <Button layoutX="155.0" layoutY="317.0" mnemonicParsing="false" onAction="#insertProduit" text="Modifier Produit" textAlignment="CENTER" />
+            <TextField id="iddesc" fx:id="iddesc" layoutX="83.0" layoutY="207.0" promptText="Description" />
+            <Label layoutX="23.0" layoutY="61.0" text="Nom" textFill="WHITE" />
+            <Label layoutX="23.0" layoutY="99.0" text="Prix" textFill="WHITE" />
+            <Label layoutX="11.0" layoutY="136.0" text="Categorie" textFill="WHITE" />
+            <Label layoutX="27.0" layoutY="174.0" text="Date" textFill="WHITE" />
+            <Label layoutX="13.0" layoutY="211.0" text="Description" textFill="WHITE" />
+            <TextField id="Nomp" fx:id="Nomp" layoutX="83.0" layoutY="60.0" promptText="Nom" />
+            <Label layoutX="26.0" layoutY="6.0" prefHeight="39.0" prefWidth="229.0" text="Modifier Produit" textAlignment="RIGHT" textFill="#fffbfb">
+               <font>
+                  <Font name="Bell MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="iddate" layoutX="71.0" layoutY="170.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="idimage" fitHeight="150.0" fitWidth="200.0" layoutX="340.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="340.0" layoutY="258.0" mnemonicParsing="false" onAction="#ProductPicture" text="Upload Your Product's Picture" />
+   </children>
+</AnchorPane>

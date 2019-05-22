@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="577.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.EspaceProduitController">
+   <children>
+      <ImageView fitHeight="869.0" fitWidth="833.0" layoutX="-18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="idimage" fitHeight="232.0" fitWidth="290.0" layoutX="50.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="addfavorite" layoutX="644.0" layoutY="60.0" mnemonicParsing="false" onAction="#AddToFavorite" text="Add To Favorite" />
+      <Button fx:id="btnAcceuil" layoutX="614.0" layoutY="543.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Accueil" />
+      <Button fx:id="btnRetour" layoutX="676.0" layoutY="543.0" mnemonicParsing="false" text="Retour" />
+      <Button fx:id="btnMonEspace" layoutX="526.0" layoutY="543.0" mnemonicParsing="false" text="Mon Espace" />
+      <ListView fx:id="lv" layoutX="528.0" layoutY="693.0" prefHeight="132.0" prefWidth="235.0" />
+      <TextArea fx:id="idtextarea" layoutX="437.0" layoutY="468.0" prefHeight="49.0" prefWidth="278.0" />
+      <ImageView fx:id="idicone" fitHeight="41.0" fitWidth="56.0" layoutX="729.0" layoutY="472.0" onMouseClicked="#AddnewCommentaire" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Produit/Comment-add-icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="394.0" layoutY="118.0" text="Information du Prooduit" textFill="#2712b5">
+         <font>
+            <Font name="Calibri Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="Prixp" layoutX="525.0" layoutY="197.0" prefHeight="25.0" prefWidth="235.0" text="Label">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="desc" layoutX="525.0" layoutY="254.0" prefHeight="63.0" prefWidth="228.0" text="Label">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="categorie" layoutX="525.0" layoutY="230.0" prefHeight="25.0" prefWidth="228.0" text="Label">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="171.0" text="Nom Produit :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="200.0" text="Prix :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="409.0" layoutY="232.0" text="Catégorie :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="264.0" text="Description :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="No" layoutX="525.0" layoutY="167.0" prefHeight="25.0" prefWidth="228.0" text="Label">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="225.0" layoutY="-4.0" text="Espace Produit" textFill="#114c61">
+         <font>
+            <Font name="MV Boli" size="43.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtAjoutCom" layoutX="440.0" layoutY="451.0" text="Ajouter un Commentaire :">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Pane layoutX="15.0" layoutY="365.0" prefHeight="356.0" prefWidth="405.0">
+         <children>
+            <VBox prefHeight="356.0" prefWidth="405.0">
+               <children>
+                  <GridPane fx:id="gird" prefHeight="324.0" prefWidth="420.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="0.0" prefWidth="73.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="85.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="140.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="0.0" prefWidth="53.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="52.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="photo" prefHeight="37.0" prefWidth="75.0" text="   Photo">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="com" prefHeight="28.0" prefWidth="149.0" text="     Commentaires" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nomuser" prefHeight="25.0" prefWidth="51.0" text=" Nom" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="m" text="m" GridPane.columnIndex="3" />
+                        <Label fx:id="s" text="s" GridPane.columnIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="S_RESIZE" />
+         </cursor>
+      </Pane>
+      <Label fx:id="idaffichertxt" layoutX="14.0" layoutY="323.0" onMouseClicked="#AfficherCommentaire" text="Afficher Les Commentaires " textFill="#2f3e9e">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="mail" fitHeight="63.0" fitWidth="65.0" layoutX="596.0" layoutY="326.0" onMouseClicked="#ToMail" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Produit/images%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="461.0" layoutY="333.0" prefHeight="37.0" prefWidth="142.0" text="Contacter Moi">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.9095238095238095">
+               <stops>
+                  <Stop color="#831635" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="63.0" fitWidth="90.0" layoutX="670.0" layoutY="324.0" onMouseClicked="#sendMail" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Produit/sms.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtcontenu" layoutX="458.0" layoutY="605.0" />
+      <Button fx:id="btnmodif" layoutX="620.0" layoutY="605.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

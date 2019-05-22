@@ -20,7 +20,7 @@
       </ImageView>
       <Pane layoutX="24.0" layoutY="37.0" prefHeight="563.0" prefWidth="791.0">
          <children>
-            <Label layoutX="139.0" layoutY="7.0" prefHeight="2.0" prefWidth="356.0" text="Liste des utilisateurs">
+            <Label layoutX="139.0" layoutY="7.0" prefHeight="2.0" prefWidth="356.0" text="Liste des publicités">
                <font>
                   <Font size="24.0" />
                </font>
@@ -32,22 +32,22 @@
             <Label fx:id="idLabel" layoutX="58.0" layoutY="342.0" prefHeight="17.0" prefWidth="32.0" />
             <Label fx:id="descLabel" layoutX="90.0" layoutY="424.0" prefHeight="17.0" prefWidth="32.0" />
             <Label fx:id="nomLabel" layoutX="74.0" layoutY="384.0" prefHeight="17.0" prefWidth="32.0" />
-            <JFXButton fx:id="ajouterpub" layoutX="661.0" layoutY="12.0" text="Ajouter Pub " />
             <TableView fx:id="userTable" layoutY="137.0" prefHeight="192.0" prefWidth="696.0">
                <columns>
-                  <TableColumn fx:id="colId" prefWidth="45.60000801086426" text="Id" />
-                  <TableColumn fx:id="colNom" prefWidth="51.999969482421875" text="Nom" />
-                  <TableColumn fx:id="coldesc" prefWidth="83.20000457763672" text="Descripction" />
-                  <TableColumn fx:id="colImage" prefWidth="45.5999755859375" text="Image" />
-                  <TableColumn fx:id="colpays" prefWidth="69.5999755859375" text="Pays" />
-                  <TableColumn fx:id="colregion" prefWidth="70.39996337890625" text="Region" />
-                  <TableColumn fx:id="colAdresse" prefWidth="61.5999755859375" text="Adresse" />
-                  <TableColumn fx:id="colnprixa" prefWidth="134.40005493164062" text="Prix avant remise" />
-                  <TableColumn fx:id="colnprixsol" minWidth="0.0" prefWidth="132.79998779296875" text="Prix aprés remise" />
+                  <TableColumn fx:id="colNom" prefWidth="57.0" text="Nom" />
+                  <TableColumn fx:id="coldesc" prefWidth="84.0" text="Descripction" />
+                  <TableColumn fx:id="colImage" prefWidth="52.0" text="Image" />
+                  <TableColumn fx:id="colpays" prefWidth="65.0" text="Pays" />
+                  <TableColumn fx:id="colregion" prefWidth="65.0" text="Region" />
+                  <TableColumn fx:id="colAdresse" prefWidth="93.0" text="Adresse" />
+                  <TableColumn fx:id="colnprixa" prefWidth="144.0" text="Prix avant remise" />
+                  <TableColumn fx:id="colnprixsol" minWidth="0.0" prefWidth="135.0" text="Prix aprés remise" />
                </columns>
             </TableView>
-            <JFXButton fx:id="mespub" layoutX="661.0" layoutY="50.0" text="Mes Pub" />
+            <Label layoutX="35.0" layoutY="456.0" prefHeight="17.0" prefWidth="236.0" text="Le nombre des publicites actuelles sont :" />
+            <Label fx:id="nbr" layoutX="277.0" layoutY="456.0" prefHeight="17.0" prefWidth="113.0" text="." />
          </children>
       </Pane>
+      <JFXButton fx:id="retour" layoutX="747.0" layoutY="14.0" text="retour" />
    </children>
 </AnchorPane>

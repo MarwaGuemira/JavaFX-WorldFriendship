@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AjouterReclamationController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="13.0" prefHeight="368.0" prefWidth="572.0" />
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtdesc" layoutX="131.0" layoutY="154.0" />
+      <JFXButton layoutX="389.0" layoutY="284.0" onAction="#insertRec" text="Ajouter" />
+      <Label layoutX="29.0" layoutY="166.0" text="Description" />
+      <JFXButton fx:id="onbt3" layoutX="511.0" layoutY="32.0" text="Retour" />
+      <Label layoutX="7.0" layoutY="103.0" prefHeight="17.0" prefWidth="106.0" text=" Type reclamation" />
+      <JFXComboBox fx:id="txttyperec" layoutX="121.0" layoutY="99.0" prefHeight="25.0" prefWidth="157.0" />
+   </children>
+</AnchorPane>

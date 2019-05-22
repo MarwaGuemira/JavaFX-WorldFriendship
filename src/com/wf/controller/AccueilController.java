@@ -37,6 +37,14 @@ public class AccueilController implements Initializable {
     private Button onbt;
        @FXML
     private Button onbt2;
+             @FXML
+    private Button onbt31;
+    @FXML
+    private Button onbt1;
+    @FXML
+    private Button onbt3;
+    @FXML
+    private Button onbt311;
 //    
 //    @FXML
 //    private void handleButtonAction(ActionEvent event )throws IOException{
@@ -54,10 +62,11 @@ public class AccueilController implements Initializable {
         onbt.setOnAction(event -> {
 
             try {
-                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/AffichageEvenement.fxml"));
-                Scene scene = new Scene(page1);
+                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/AfficherEvenement.fxml"));
+                Scene scene = new Scene(page1,1300,900);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
+               
                 stage.show();
             } 
             catch (IOException ex) {
@@ -68,7 +77,24 @@ public class AccueilController implements Initializable {
         onbt2.setOnAction(event -> {
 
             try {
-                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/MesPubs.fxml"));
+                
+                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/AfficherPub.fxml"));
+                Scene scene = new Scene(page1);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } 
+            catch (IOException ex) {
+                Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }); 
+      
+        
+          onbt31.setOnAction(event -> {
+
+            try {
+                
+                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/AffichageCatFXML.fxml"));
                 Scene scene = new Scene(page1);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -79,7 +105,43 @@ public class AccueilController implements Initializable {
             }
         }); 
         
+        
+        // TODO
+   
+    
+         onbt311.setOnAction(event -> {
+
+            try {
+                
+                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/feedbacketreclamAdmin.fxml"));
+                Scene scene = new Scene(page1);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } 
+            catch (IOException ex) {
+                Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }); 
+        
+    
+     onbt1.setOnAction(event -> {
+            try {
+                
+                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/EspaceVente.fxml"));
+                Scene scene = new Scene(page1);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } 
+            catch (IOException ex) {
+                Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }); 
+        
+        
         // TODO
     }    
     
 }
+    

@@ -5,17 +5,28 @@
  */
 package com.wf.controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.wf.entity.Evenement;
 import com.wf.service.EvenementService;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
@@ -23,7 +34,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -33,8 +46,7 @@ import javafx.scene.input.MouseEvent;
 public class AffichageMesEvenementController implements Initializable {
  @FXML
     private TableView eveTable;
-    @FXML
-    private TableColumn<Evenement, Integer> colId;
+    //private TableColumn<Evenement, Integer> colId;
     @FXML
     private TableColumn<Evenement, String> colNom;
     @FXML
@@ -49,10 +61,7 @@ public class AffichageMesEvenementController implements Initializable {
     private TableColumn<Evenement, Integer> colnbtick;
     @FXML
     private TableColumn<Evenement, String> colAdresse;
-    @FXML
-    private TableColumn<Evenement, LocalDate> coldatedb;
-     @FXML
-    private TextField idLabel;
+ //   private TextField idLabel;
     @FXML
     private TextField nomLabel;
     @FXML
@@ -63,6 +72,18 @@ public class AffichageMesEvenementController implements Initializable {
       
 //       
       private ListData listdata = new ListData();
+    @FXML
+    private TextField search2;
+    @FXML
+    private JFXButton retour;
+    @FXML
+    private TextField pays;
+    @FXML
+    private TextField nbrtick;
+    @FXML
+    private TextField region;
+    @FXML
+    private TextField adresse;
     /**
      * Initializes the controller class.
      */
@@ -73,14 +94,14 @@ public class AffichageMesEvenementController implements Initializable {
         // TODO
                  eveTable.setItems(listdata.getUsers2());
               setCellValue();
-                   colId.setCellValueFactory(new PropertyValueFactory<>("idevenement"));
+                //   colId.setCellValueFactory(new PropertyValueFactory<>("idevenement"));
                 colNom.setCellValueFactory(new PropertyValueFactory<>("nomevenement"));
                 coldesc.setCellValueFactory(new PropertyValueFactory<>("descriptionevenement"));
                 colpays.setCellValueFactory(new PropertyValueFactory<>("pays"));
                 colAdresse.setCellValueFactory(new PropertyValueFactory<>("Adresse"));
                 colregion.setCellValueFactory(new PropertyValueFactory<>("Region"));
                 colnbrpar.setCellValueFactory(new PropertyValueFactory<>("nbrparticipants"));
-                colnbtick.setCellValueFactory(new PropertyValueFactory<>("nbrplacestotal"));
+                colnbtick.setCellValueFactory(new PropertyValueFactory<>("nbrtickets"));
                 
       eveTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 //                     
@@ -97,9 +118,25 @@ public class AffichageMesEvenementController implements Initializable {
 //                     });
 //                     
                      
+   
+      retour.setOnAction(event -> {
+
+            try {
+                Parent page1 = FXMLLoader.load(getClass().getResource("/com/wf/controller/AffichageEvenement.fxml"));
+                Scene scene = new Scene(page1);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } 
+            catch (IOException ex) {
+                Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }); 
+    
     }   
     
 //        @FXML
+    @FXML
     public void enable()
     {}
     private void setCellValue() {
@@ -110,10 +147,14 @@ public class AffichageMesEvenementController implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 Evenement pl = listdata.getUsers2().get(eveTable.getSelectionModel().getSelectedIndex());
-                idLabel.setText(Integer.toString(pl.getIdevenement()));
+              //  idLabel.setText(Integer.toString(pl.getIdevenement()));
                 nomLabel.setText(pl.getNomevenement());
                 descLabel.setText((pl.getDescriptionevenement()));
-                
+                 pays.setText((pl.getPays()));
+                                adresse.setText((pl.getAdresse()));
+                 region.setText((pl.getRegion()));
+                 nbrtick.setText(Integer.toString(pl.getNbrtickets()));
+
             modifier.setDisable(false);
             }
 
@@ -180,9 +221,10 @@ public class AffichageMesEvenementController implements Initializable {
      
       
       
-      Evenement u=new Evenement (Integer.parseInt(idLabel.getText()),nomLabel.getText(),descLabel.getText());
+      Evenement u=new Evenement (nomLabel.getText(),pays.getText(),region.getText(),adresse.getText(),descLabel.getText(),nbrtick.getText());
             EvenementService pdao = EvenementService.getInstance();
             pdao.update(u);
+            eveTable.refresh();
              
 //            listViewEvenement.clear();
 //       
@@ -203,14 +245,14 @@ public class AffichageMesEvenementController implements Initializable {
 //            
             
             
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+          Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
         alert.setContentText("Personne modifié avec succés!");
         alert.showAndWait();
   
         
-        idLabel.setText("");
+        //idLabel.setText("");
                 nomLabel.setText("");
         descLabel.setText("");
         }    
@@ -225,6 +267,7 @@ public class AffichageMesEvenementController implements Initializable {
         {
           //  User1Service pdao1 = User1Service.getInstance();
             allusers.remove(eve);
+            
             
         }
     }
@@ -241,6 +284,36 @@ public class AffichageMesEvenementController implements Initializable {
 //
 //        eveTable.setItems(listViewEvenement);
 //    }
+    
+    
+         FilteredList<Evenement> filter = new FilteredList<>(listdata.getUsers(), e -> true);   
+    @FXML
+    private void search2(KeyEvent evloent4) {
+       
+       search2.textProperty().addListener((observable,oldValue,newValue) -> {
+           filter.setPredicate((Predicate<? super Evenement>) (Evenement Evenement)->{
+           
+             if(newValue.isEmpty() || newValue==null){
+                 return true;
+             }
+             else if((Evenement.getNomevenement().contains(newValue)) || (Evenement.getNomevenement().toLowerCase().contains(newValue))){
+                 return true;
+             }
+           return false;
+           });
+           
+       });
+       SortedList sort=new SortedList(filter);
+       sort.comparatorProperty().bind(eveTable.comparatorProperty());
+      eveTable.setItems(sort);
+    }
+
+    @FXML
+    private void search2(ActionEvent event) {
+    }
+
+    
+    
 
     }
     

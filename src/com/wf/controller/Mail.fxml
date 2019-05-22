@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.MailController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="430.0" fitWidth="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="42.0" layoutY="75.0" prefHeight="294.0" prefWidth="316.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints maxHeight="200.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="200.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="200.0" minHeight="0.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="mail" prefHeight="42.0" prefWidth="336.0" GridPane.rowIndex="1" />
+            <TextField fx:id="sujet" prefHeight="43.0" prefWidth="336.0" GridPane.rowIndex="3" />
+            <TextArea fx:id="message" prefHeight="99.0" prefWidth="108.0" GridPane.rowIndex="5" />
+            <Label text="Mail :">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Subject :" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Message :" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="102.0" layoutY="23.0" text="Contactez-Moi" textFill="#1e1e61">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEnvoyer" layoutX="289.0" layoutY="380.0" mnemonicParsing="false" onAction="#sendmail" text="Envoyer" />
+   </children>
+</AnchorPane>

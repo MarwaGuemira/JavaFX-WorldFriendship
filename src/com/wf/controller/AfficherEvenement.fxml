@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="859.0" prefWidth="1302.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wf.controller.AfficherEvenementController">
+   <children>
+      <ImageView fitHeight="901.0" fitWidth="1302.0">
+         <image>
+            <Image url="@../../../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image1" fitHeight="179.0" fitWidth="250.0" layoutX="326.0" layoutY="286.0" onMouseClicked="#AfficheMoi1" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image2" fitHeight="179.0" fitWidth="250.0" layoutX="608.0" layoutY="286.0" onMouseClicked="#AfficheMoi2" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image4" fitHeight="179.0" fitWidth="250.0" layoutX="319.0" layoutY="555.0" onMouseClicked="#AfficheMoi4" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image5" fitHeight="179.0" fitWidth="250.0" layoutX="608.0" layoutY="559.0" onMouseClicked="#AfficheMoi5" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image3" fitHeight="179.0" fitWidth="250.0" layoutX="876.0" layoutY="284.0" onMouseClicked="#AfficheMoi3" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image6" fitHeight="179.0" fitWidth="250.0" layoutX="876.0" layoutY="559.0" onMouseClicked="#AfficheMoi6" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="label" layoutX="376.0" layoutY="478.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label4" layoutX="367.0" layoutY="748.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label2" layoutX="695.0" layoutY="478.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label5" layoutX="686.0" layoutY="748.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label3" layoutX="935.0" layoutY="478.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label6" layoutX="926.0" layoutY="748.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <ImageView fx:id="imageprecedent" fitHeight="45.0" fitWidth="47.0" layoutX="264.0" layoutY="533.0" onMouseClicked="#precedent">
+         <image>
+            <Image url="@../../../images/precedent.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagesuivant" fitHeight="45.0" fitWidth="47.0" layoutX="1234.0" layoutY="527.0" onMouseClicked="#suivant">
+         <image>
+            <Image url="@../../../images/suivant.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label41" layoutX="377.0" layoutY="758.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label21" layoutX="705.0" layoutY="488.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label51" layoutX="696.0" layoutY="758.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label31" layoutX="945.0" layoutY="488.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label61" layoutX="936.0" layoutY="758.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label fx:id="label11" layoutX="386.0" layoutY="488.0" prefHeight="30.0" prefWidth="218.0" text="Label" />
+      <Label layoutX="1244.0" layoutY="857.0" text="Label" />
+      <JFXButton fx:id="ajjj" layoutX="14.0" layoutY="228.0" onAction="#ajeve" prefHeight="65.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;" text="Ajouter Evenement" textFill="#29c28f">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="16.0" layoutY="322.0" onAction="#meseve" prefHeight="65.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;" text="Mes Reservation" textFill="#29c28f">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="16.0" layoutY="412.0" onAction="#mesrev" prefHeight="65.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;" text="Mes Evenement" textFill="#29c28f">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="109.0" fitWidth="123.0" layoutX="23.0" layoutY="21.0">
+         <image>
+            <Image url="@../../../images/logofs.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="42.0" prefHeight="61.0" prefWidth="392.0" text="World Friendship" textAlignment="CENTER" textFill="#8c680c" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
